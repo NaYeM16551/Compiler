@@ -1,0 +1,7 @@
+*.txt
+*.o
+*.c
+out
+parser.y:Zone.Identifier
+y.tab.h
+*.asm

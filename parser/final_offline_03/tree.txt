@@ -1,0 +1,56 @@
+start : program 	<Line: 1-9>
+ program : program unit 	<Line: 1-9>
+  program : unit 	<Line: 1-4>
+   unit : func_definition 	<Line: 1-4>
+    func_definition : type_specifier ID LPAREN parameter_list RPAREN compound_statement 	<Line: 1-4>
+     type_specifier : INT 	<Line: 1-1>
+      INT : int	<Line: 1>
+     ID : foo	<Line: 1>
+     LPAREN : (	<Line: 1>
+     parameter_list : parameter_list COMMA type_specifier ID 	<Line: 1-1>
+      parameter_list : type_specifier ID 	<Line: 1-1>
+       type_specifier : INT 	<Line: 1-1>
+        INT : int	<Line: 1>
+       ID : x	<Line: 1>
+      COMMA : ,	<Line: 1>
+      type_specifier : INT 	<Line: 1-1>
+       INT : int	<Line: 1>
+      ID : y	<Line: 1>
+     RPAREN : )	<Line: 1>
+     compound_statement : LCURL RCURL 	<Line: 2-4>
+      LCURL : {	<Line: 2>
+      RCURL : }	<Line: 4>
+  unit : func_definition 	<Line: 6-9>
+   func_definition : type_specifier ID LPAREN RPAREN compound_statement 	<Line: 6-9>
+    type_specifier : INT 	<Line: 6-6>
+     INT : int	<Line: 6>
+    ID : main	<Line: 6>
+    LPAREN : (	<Line: 6>
+    RPAREN : )	<Line: 6>
+    compound_statement : LCURL statements RCURL 	<Line: 6-9>
+     LCURL : {	<Line: 6>
+     statements : statement 	<Line: 8-8>
+      statement : expression_statement 	<Line: 8-8>
+       expression_statement : expression SEMICOLON 	<Line: 8-8>
+        expression : logic_expression 	<Line: 8-8>
+         logic_expression : rel_expression 	<Line: 8-8>
+          rel_expression : simple_expression 	<Line: 8-8>
+           simple_expression : term 	<Line: 8-8>
+            term : unary_expression 	<Line: 8-8>
+             unary_expression : factor 	<Line: 8-8>
+              factor : ID LPAREN argument_list RPAREN 	<Line: 8-8>
+               ID : foo	<Line: 8>
+               LPAREN : (	<Line: 8>
+               argument_list : arguments 	<Line: 8-8>
+                arguments : logic_expression 	<Line: 8-8>
+                 logic_expression : rel_expression 	<Line: 8-8>
+                  rel_expression : simple_expression 	<Line: 8-8>
+                   simple_expression : term 	<Line: 8-8>
+                    term : unary_expression 	<Line: 8-8>
+                     unary_expression : factor 	<Line: 8-8>
+                      factor : variable 	<Line: 8-8>
+                       variable : ID 	<Line: 8-8>
+                        ID : x	<Line: 8>
+               RPAREN : )	<Line: 8>
+        SEMICOLON : ;	<Line: 8>
+     RCURL : }	<Line: 9>

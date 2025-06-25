@@ -1,0 +1,2 @@
+parameter_list : type_specifier ID
+parameter_list : parameter_list COMMA type_specifier ID
