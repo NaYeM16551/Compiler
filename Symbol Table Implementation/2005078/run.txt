@@ -1,0 +1,1 @@
+g++ .\2005078_main.cpp .\2005078_ScopeTable.cpp .\2005078_symbol_info.cpp .\2005078_symbol_table.cpp -o .\2005078_main.exe
